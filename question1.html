@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="styles/questionstyle.css">
+  <script src="scripts/script.js"></script>
+</head>
+<body>
+
+  <header>
+    
+    <div id="menu"> 
+      <h1 id="logo">Quizer</h1>
+          <nav id="menu-itens">
+            <a href="" class="menu-options">Home</a>
+            <a href="" class="menu-options">Categorias</a>
+            <a href="" class="menu-options">Outros quizzes</a>
+            <a href="" class="menu-options">Temas</a>
+            <a href="" class="menu-options">Sobre</a>
+            <a href="" id="entrar">Entrar</a>
+          </nav>
+    </div>
+
+    <div id="menu-mobile">
+      <p style="color: transparent;">teseeee</p>
+      <h1 id="logo-mobile">Quizer</h1>
+      
+      <img src="imgs/menu_white_36dp.svg" id="menu-button-mobile" onclick="openItens()">
+    </div>
+
+    <nav class="menu-itens-mobile" class="open-menu">
+      <a href="" class="menu-options-mobile">Home</a>
+      <a href="" class="menu-options-mobile">Categorias</a>
+      <a href="" class="menu-options-mobile">Outros quizzes</a>
+      <a href="" class="menu-options-mobile">Temas</a>
+      <a href="" class="menu-options-mobile">Sobre</a>
+      <a href="" id="entrar-mobile">Entrar</a>
+    </nav>
+
+  </header>
+
+
+  <main>
+     
+    <div id="audios">
+      <audio id="correct" src="audios/correct-cut.mp3"></audio>
+      <audio id="error" src="audios/error-cut.mp3"></audio>
+      <audio id="next" src="audios/next - cut.mp3"></audio>
+    </div>
+
+
+     <h1>Quiz boladão, se errou, é viadão!</h1>
+    <section id="content">
+
+      <div class="questions"> 
+       <h2>1. Quantos planetas Terra cabem dentro do Sol?</h2>
+        <input type="button" value="A - Um milhão" class="question-button" id="question-button-correct" onclick="correctAnswer()">
+        <input type="button" value="B - Cem" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="C - Seiscentos" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="D - Cento e cinquenta" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="E - Dois milhões" class="question-button" onclick="wrongAnswer()">
+      </div>
+
+       <p class="answer-text"></p>
+       <input type="button" value="Próxima pergunta" class="next-question" onclick="nextQuestion()">
+       <h2 class="lifes">Quantia de erros: 0</h2>
+    </section>
+
+  </main>
+
+
+
+  <footer>
+
+
+  </footer>
+  
+</body>
+</html>

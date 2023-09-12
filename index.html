@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="styles/questionstyle.css">
+  <script src="scripts/script.js"></script>
+</head>
+<body>
+
+  <header>
+    <!------------Versão do menu para tablet, computadores e televisões------------->
+    <div id="menu"> 
+      <h1 id="logo">Quizer</h1>
+          <nav id="menu-itens">
+            <a href="" class="menu-options">Home</a>
+            <a href="" class="menu-options">Categorias</a>
+            <a href="" class="menu-options">Outros quizzes</a>
+            <a href="" class="menu-options">Temas</a>
+            <a href="" class="menu-options">Sobre</a>
+            <a href="" id="entrar">Entrar</a>
+          </nav>
+    </div>
+
+    <!------------Versão do menu para celulares------------->
+    <div id="menu-mobile">
+      <p style="color: transparent;">teseeeeee</p>
+      <h1 id="logo-mobile">Quizer</h1>
+      
+      <img src="imgs/menu_white_36dp.svg" id="menu-button-mobile" onclick="openItens()">
+    </div>
+
+    <nav class="menu-itens-mobile" class="open-menu">
+      <a href="" class="menu-options-mobile">Home</a>
+      <a href="" class="menu-options-mobile">Categorias</a>
+      <a href="" class="menu-options-mobile">Outros quizzes</a>
+      <a href="" class="menu-options-mobile">Temas</a>
+      <a href="" class="menu-options-mobile">Sobre</a>
+      <a href="" id="entrar-mobile">Entrar</a>
+    </nav>
+
+  </header>
+
+  <main>
+    
+    <!------------Audios que são acionados via JS-------------> 
+    <div id="audios">
+      <audio id="correct" src="audios/correct-cut.mp3"></audio>
+      <audio id="error" src="audios/error-cut.mp3"></audio>
+      <audio id="next" src="audios/next - cut.mp3"></audio>
+    </div>
+
+     <!------------Menu inicial do quiz------------->
+     <div id="menu-quiz">
+      <h1>Quiz boladão<br>Errou é viadão</h1>
+      <input type="button" value="Começar" class="start-quiz" onclick="startQuiz()">
+    </div>
+
+     <!------------Todo conteúdo principal do quiz------------->
+    <section id="content">
+
+       <!----------------------Pergunta 1---------------------->
+      <div class="questions"> 
+
+        <h2>1. Quantos planetas Terra cabem dentro do Sol?</h2>
+        <input type="button" value="A - Um milhão" class="question-button" id="question-button-correct" onclick="correctAnswer()">
+        <input type="button" value="B - Cem" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="C - Seiscentos" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="D - Cento e cinquenta" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="E - Dois milhões" class="question-button" onclick="wrongAnswer()">
+
+        <div class="explanation">
+          <p>Resposta correta: Alternativa A</p>
+          <p>O Sol possui 1 392 700 km de diâmetro, medida 109 vezes maior que a Terra, que possui diâmetro de 12 742 km.</p>
+        </div>
+
+      </div>
+
+
+      <!----------------------Pergunta 2---------------------->
+      <div class="questions-hide">
+        <h2>2. Em que lugar vivem mais cangurus do que pessoas?</h2>
+        <input type="button" value="A - Indonésia" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="B - Nova Zelândia" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="C - Austrália" class="question-button"  onclick="correctAnswer()">
+        <input type="button" value="D - Papua-Nova Guiné" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="E - África do Sul" class="question-button" onclick="wrongAnswer()">
+
+        <div class="explanation">
+          <p>Resposta correta: Alternativa C</p>
+          <p>Na Austrália, a população de cangurus, cerca de 45 milhões, representa quase o dobro da população australiana (25 milhões). Ainda que isso seja interessante, o excesso de marsupiais no país pode afetar a biodiversidade.</p>
+        </div>
+
+     </div>
+
+     <!----------------------Pergunta 3---------------------->
+     <div class="questions-hide">
+
+       <h2>3. Quantos olhos a maior parte das aranhas têm?</h2>
+       <input type="button" value="A - Dois" class="question-button" onclick="wrongAnswer()">
+       <input type="button" value="B - Quatro" class="question-button" onclick="wrongAnswer()">
+       <input type="button" value="C - Quatro pares" class="question-button"  onclick="correctAnswer()">
+       <input type="button" value="D - Seis" class="question-button" onclick="wrongAnswer()">
+       <input type="button" value="E - Um" class="question-button" onclick="wrongAnswer()">
+
+       <div class="explanation">
+        <p>Resposta correta: Alternativa C </p>
+        <p>A maior parte das aranhas possuem oito olhos, ou seja, quatro pares. No entanto, algumas possuem dois, quatro ou seis olhos.</p>
+      </div>
+
+    </div>
+
+
+    <!----------------------Pergunta 4---------------------->
+      <div class="questions-hide">
+
+        <h2>4. De que são constituídos os diamantes?</h2>
+        <input type="button" value="A - Grafite" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="B - Rênio" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="C - Carbono" class="question-button"  onclick="correctAnswer()">
+        <input type="button" value="D - Ósmio" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="E - Bóhrio" class="question-button" onclick="wrongAnswer()">
+
+        <div class="explanation">
+          <p>Resposta correta: Alternativa C</p>
+          <p>
+            O diamante é composto exclusivamente por átomos de carbono. Trata-se de uma das formas alotrópicas desse elemento químico.          
+          </p>
+        </div>
+
+      </div>
+
+      <!----------------------Pergunta 5---------------------->
+      <div class="questions-hide">
+
+        <h2>5. Qual das alternativas contém apenas nomes de rios?</h2>
+        <input type="button" value="A - São Francisco, Douro, Antártico" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="B - Nilo, Amazonas, Mississipi" class="question-button" onclick="correctAnswer()">
+        <input type="button" value="C - Cáspio, Vermelho, Reno" class="question-button"  onclick="wrongAnswer()">
+        <input type="button" value="D - Tocantins, Bering, Ganges" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="E - Danúbio, Jordão, Morto" class="question-button" onclick="wrongAnswer()">
+  
+        <div class="explanation">
+          <p>Resposta correta: Alternativa B</p>
+          <p>
+            Os três rios maiores do mundo são, respectivamente: o Nilo, o Amazonas e o Mississipi.<br><br>
+            O rio Nilo possui 7088 de extensão e está situado no continente africano. <br>
+            O rio Amazonas, com 6992 Km de extensão, está localizado na América do Sul. <br>
+            O rio Mississipi apresenta 6212 Km de extensão e está situado nos Estados Unidos. <br>          
+          </p>
+        </div>
+  
+      </div>
+
+      <!----------------------Pergunta 6---------------------->
+      <div class="questions-hide">
+
+        <h2>6. Quanto mede uma girafa?</h2>
+        <input type="button" value="A - Entre 4,8 e 5,5 metros" class="question-button" onclick="correctAnswer()">
+        <input type="button" value="B - 2 metros" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="C - Entre 5 e 6 metros" class="question-button"  onclick="wrongAnswer()">
+        <input type="button" value="D - 2,5 metros" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="E - 4 metros" class="question-button" onclick="wrongAnswer()">
+  
+        <div class="explanation">
+          <p>Resposta correta: Alternativa A</p>
+          <p>
+            A girafa é um mamífero terrestre que mede entre 4,8 e 5,5 metros, sendo uma dos animais mais altos do planeta.<br>
+            Os machos da espécie costumam ser os maiores, com 5,5 metros de comprimento, já as fêmeas chegam a medir até 4,5 metros.         
+          </p>
+        </div>
+        
+      </div>
+
+
+      <!----------------------Pergunta 7---------------------->
+      <div class="questions-hide">
+
+        <h2>7. Qual a ciência que estuda a atmosfera da Terra e a climatologia?</h2>
+        <input type="button" value="A - Astronomia" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="B - Metereologia" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="C - Dispersão atmosférica" class="question-button"  onclick="wrongAnswer()">
+        <input type="button" value="D - Meteorologia" class="question-button" onclick="correctAnswer()">
+        <input type="button" value="E - Horologia" class="question-button" onclick="wrongAnswer()">
+  
+        <div class="explanation">
+          <p>Resposta correta: Alternativa D</p>
+          <p>
+            A meteorologia é uma ciência que estuda os fenômenos que ocorrem na atmosfera terrestre, com foco no clima e na previsão do tempo.         
+          </p>
+        </div>
+        
+      </div>
+
+
+      <!----------------------Pergunta 8---------------------->
+      <div class="questions-hide">
+
+        <h2>8. Quantos braços tem um polvo?</h2>
+        <input type="button" value="A - Seis" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="B - Oito" class="question-button" onclick="correctAnswer()">
+        <input type="button" value="C - Dez" class="question-button"  onclick="wrongAnswer()">
+        <input type="button" value="D - Sete" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="E - Três" class="question-button" onclick="wrongAnswer()">
+  
+        <div class="explanation">
+          <p>Resposta correta: Alternativa B</p>
+          <p>
+            Os polvos são moluscos marinhos que possuem oito braços com ventosas.         
+          </p>
+        </div>
+        
+      </div>
+
+
+
+      <!----------------------Pergunta 9---------------------->
+      <div class="questions-hide">
+
+        <h2>9. Qual das alternativas contém apenas animais cujos esqueletos são externos?</h2>
+        <input type="button" value="A - Caracóis, caranguejos e lagostas" class="question-button" onclick="correctAnswer()">
+        <input type="button" value="B - Besouros, peixes e formigas" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="C - Caracóis, lulas e aranhas" class="question-button"  onclick="wrongAnswer()">
+        <input type="button" value="D - Borboletas, caranguejos e peixes" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="E - Lagostas, polvos e escorpiões" class="question-button" onclick="wrongAnswer()">
+  
+        <div class="explanation">
+          <p>Resposta correta: Alternativa A</p>
+          <p>
+            O exoesqueleto ou esqueleto externo é uma camada rígida de quitina ou de carbonato de cálcio presente em alguns animais, como insetos e moluscos.
+            <br>
+            Os caracóis, caranguejos e lagostas são exemplos de animais que possuem um esqueleto externo.        
+          </p>
+        </div>
+        
+      </div>
+
+      <!----------------------Pergunta 10---------------------->
+      <div class="questions-hide">
+
+        <h2>10. Quanto tempo o vidro demora para se decompor?</h2>
+        <input type="button" value="A - 500 anos" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="B - 1000 anos" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="C - 4000 anos" class="question-button"  onclick="wrongAnswer()">
+        <input type="button" value="D - 1 milhão de anos" class="question-button" onclick="wrongAnswer()">
+        <input type="button" value="E - Tempo indeterminado" class="question-button" onclick="correctAnswer()">
+  
+        <div class="explanation">
+          <p>Resposta correta: Alternativa E</p>
+          <p>
+            A decomposição é um processo natural que ocorre em todos os materiais, no entanto, isso irá depender do volume descartado, do tipo de material e das condições climáticas do local.
+            <br><br>
+            Segundo o Instituto GEA – Ética e Meio Ambiente, o vidro demora 4000 anos para se decompor no solo.     
+          </p>
+        </div>
+        
+      </div>
+
+
+      <div class="questions-hide">
+
+        <h2>Não tem próxima pergunta. Acabou o Quiz :)</h2>
+        <a href="index.html" id="back-to-menu">Voltar ao menu inicial</a>
+    
+      </div>
+
+    </div>
+     
+        <!------------Validador de resposta e contador de erros------------>
+       <div class="results">
+         <p class="answer-text"></p>
+         <input type="button" value="Próxima pergunta" class="next-question" onclick="nextQuestion()">
+         <h2 class="lifes">Quantia de erros: 0</h2>
+       </div>
+    </section>
+
+  </main>
+
+
+
+  <footer>
+   <p>Site criado por Rudney de Oliveira Bueno</p>
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,403 @@
+/* cores:
+verde claro #127369
+verde escuro #10403B
+verde fraco #8AA6A3
+cinza escuro #4C5958
+cinza claro #BFBFBF
+*/
+
+body {
+  height: 100vh;
+  padding: 0px;
+  margin: 0%;
+  box-sizing: border-box;
+  background-color:#4f3755f6;
+}
+/*---------------------------------------------Header---------------------------------------------*/
+div#menu-mobile, .menu-itens-mobile {
+  display: none;
+}
+
+div#menu {
+  background-color: #3d1040;
+
+  display: flex;
+  justify-content: space-between;
+  
+  height: 70px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+nav#menu-itens {
+  font-size: 22px;
+  font-weight: bold;
+  
+  display: flex;
+  align-items: center;
+  gap: 1.1vw;
+
+  padding-right: 20px;
+}
+
+h1#logo {
+  color: #2ec1b2;
+  border-radius: 7px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 45px;
+
+  margin: 0px;
+  padding-left: 20px;
+}
+
+a#entrar{
+  color: white;
+  background-color: #127369;
+  border: 2px solid rgba(255, 255, 255, 0.79);
+  border-radius: 7px;
+  text-align: center;
+  box-shadow: 3px 5px 8px  rgba(0, 0, 0, 0.35);
+  text-decoration: none;
+
+  padding: 7px;
+  width: 85px;
+}
+
+a#entrar:hover {
+  background-color: #009c8f;
+  border: 2px solid rgb(255, 255, 255);
+
+  transition: background-color 0.5s, border 1s;
+}
+
+a.menu-options {
+  color: white;
+  font-size: 19px;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid transparent;
+
+  padding: 2px;
+}
+
+a.menu-options:hover {
+  color: rgb(232, 151, 238);
+  background-color: #56215b;
+  border: 2px solid #6c2870;
+  border-radius: 7px;
+  box-shadow: 3px 5px 8px  rgba(0, 0, 0, 0.35);
+
+  transition: background-color 0.5s, border 1.5s, box-shadow 1.2s, color 0.5s; 
+}
+
+
+/*---------------------------------------------Página principal---------------------------------------------*/
+
+/*Menu inicial do Quiz*/
+div#menu-quiz {
+  background-color: #eab1ff9b;
+  border-radius: 10px;
+  border: 3px solid white;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+  min-width: 250px;
+  max-width: 650px;
+  padding: 10px;
+  margin: auto;
+}
+
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+/*Todo conteúdo do quiz*/
+section#content{
+  background-color:#eab1ff9b;
+  color: white;
+  border: 3px solid white;
+  border-radius: 10px;
+  margin: 0px;
+
+  display: none;
+  flex-direction: column;
+
+  width: 70%;
+  min-width: 250px;
+  max-width: 650px;
+  padding: 10px;
+  margin: 0px
+}
+
+/*Estilização dos títulos principais do Quiz*/
+main h1 {
+  color: white;
+  text-align: center;
+  
+  min-width: 150px;
+  max-width: 650px;
+  padding: 20px;
+  margin: auto;
+}
+
+/*Estilização do botão para iniciar o Quiz*/
+input.start-quiz,input.end-quiz {
+  color: white;
+  font-size: 19px;
+  background-color: #865c929b;
+  border: 2px solid rgba(255, 255, 255, 0.846);
+  border-radius: 7px;
+
+  padding: 8px;
+}
+
+/*Estilização do botão para iniciar o Quiz*/
+input.start-quiz:hover,input.end-quiz:hover {
+  background-color: #883790;
+}
+
+/*Estilização do botão para iniciar o Quiz*/
+input.start-quiz:active {
+  background-color: #56215b;
+}
+
+/*Container com as perguntas e suas alternativas*/
+div.questions{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+div.questions-hide {
+  display: none;
+}
+
+div.questions-notshow {
+  display: none;
+}
+
+div.explanation {
+  background-color: #3d1040;
+  border: 3px solid white;
+  border-radius: 10px;
+  font-size: 18px;
+
+  display: none;
+  padding: 0px 7px;
+}
+
+div.explanation {
+  display: none;
+}
+
+/*Título das perguntas e contador de erros*/
+section h2 {
+  color: white;
+  background-color: #865c929b;
+  box-shadow: 3px 5px 8px  rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.846);
+  border-radius: 7px;
+  border-radius: 7px;
+
+  padding: 6px;
+  padding-right: 30px;
+}
+
+/*Estilização das alternativas*/
+input.question-button{
+  color: white;
+  background: #56215b;
+  box-shadow: 3px 5px 8px  rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.846);
+  border-radius: 7px;
+  padding: 6px;
+  max-width: 99%;
+  padding-right: 25px;
+  border-radius: 7px;
+}
+
+/*Estilização das alternativas*/
+input.question-button:hover {
+  background-color: #883790; 
+}
+
+/*Estilização das alternativas*/
+input.question-button:active {
+  background-color: #cb72d3;
+}
+
+/*Style aplicado quando o usúario errar a resposta*/
+.answer-wrong {
+  color: red;
+  font-size: 20px;
+  background-color: #56215b;
+  border: 2px solid rgb(255, 22, 22);
+  border-radius: 7px;
+
+  display: block;
+  padding: 6px;
+}
+
+/*Style aplicado quando o usúario acertar a resposta*/
+.answer-correct {
+  color: rgb(5, 255, 5);
+  background-color: #56215b;
+  font-size: 20px;
+  border: 2px solid rgb(8, 255, 8);
+  border-radius: 7px;
+
+  padding: 6px;
+  margin: 20px 0px;
+
+}
+
+/*Estilização do botão para ir para a próxima pergunta do quiz*/
+input.next-question {
+  color: white;
+  font-size: 19px;
+  background-color: #865c929b;
+  box-shadow: 3px 5px 8px  rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.846);
+  border-radius: 7px;
+
+  display: none;
+  padding: 6px;
+  padding-right: 30px;
+}
+
+/*Estilização do botão para ir para a próxima pergunta do quiz*/
+input.next-question:hover {
+  background-color: #883790;
+}
+
+/*Estilização do botão para ir para a próxima pergunta do quiz*/
+input.next-question:active {
+  background-color: #56215b;
+}
+
+/*Estilização do botão para retornar ao menu do quiz*/
+a#back-to-menu {
+  color: white;
+  background-color: #56215b;
+  border: 2px solid white;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 20px;
+  
+  padding: 7px;
+}
+
+a#back-to-menu:hover {
+  background-color:#6c2870;
+}
+
+/*---------------------------------------------Footer---------------------------------------------*/
+
+footer {
+  background-color: #3d1040;
+  color: white;
+  text-align: center;
+
+
+  padding: 6px;
+  margin-top: 620px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 21px;
+}
+
+/*---------------------------------------------Configuração mobile---------------------------------------------*/
+
+@media screen and (max-width: 730px) {
+
+body {
+ background-color:#4d3b51f6;
+ box-sizing: border-box;
+    
+ padding: 0px;
+ margin: 0px;
+}
+  
+div#menu {
+ display: none;
+}
+
+div#menu-mobile {
+  background-color: #3d1040;
+  display: flex;
+
+  justify-content:space-between;
+
+  padding: 20px 0px;
+  margin-bottom: 20px;
+}
+
+h1#logo-mobile {
+ color: #2ec1b2;
+ border-radius: 7px;
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-size: 45px;
+
+ margin: 0px;
+ width: 150px;
+}
+
+img#menu-button-mobile {
+  justify-self: right;
+  cursor: pointer;
+  width: 50px;
+  padding-right: 6px;
+}
+
+.menu-itens-mobile {
+  background-color: #3d1040;
+  font-size: 22px;
+  margin-top: -20px;
+  padding: 15px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+}
+
+a.menu-options-mobile {
+  color: white;
+  text-decoration: none;
+}
+
+a.menu-options-mobile:active {
+  color: rgb(232, 151, 238);
+}
+
+a#entrar-mobile {
+  color: white;
+  background-color: #127369;
+  box-shadow: 3px 5px 8px  rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.79);
+  border-radius: 7px;
+  text-align: center;
+  text-decoration: none;
+
+  padding: 7px;
+  width: 150px;
+}
+
+a#entrar-mobile:active {
+  background-color: #009c8f;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+}
