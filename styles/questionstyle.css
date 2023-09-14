@@ -339,16 +339,13 @@ div#menu-mobile {
 
   justify-content:space-between;
 
-  padding: 20px 0px;
   margin-bottom: 20px;
 }
 
 h1#logo-mobile {
  color: #2ec1b2;
- border-radius: 7px;
  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
  font-size: 45px;
-
  margin: 0px;
  width: 150px;
 }
@@ -356,7 +353,7 @@ h1#logo-mobile {
 img#menu-button-mobile {
   justify-self: right;
   cursor: pointer;
-  width: 50px;
+  width: 40px;
   padding-right: 6px;
 }
 
